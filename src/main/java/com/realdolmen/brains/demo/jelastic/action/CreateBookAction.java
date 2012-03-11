@@ -37,8 +37,7 @@ public class CreateBookAction extends HttpServlet  {
 		
 		bookService.create(isbn, title);
 
-		req.getRequestDispatcher(Action.HOME).forward(req, resp);
-		
+		resp.sendRedirect(Action.HOME);
 		
 	}
 }

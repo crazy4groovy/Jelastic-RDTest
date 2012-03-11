@@ -22,8 +22,6 @@ public class CreateBookAction extends HttpServlet  {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		super.doGet(req, resp);
 		doPost(req, resp);
 	}
 	
@@ -31,13 +29,15 @@ public class CreateBookAction extends HttpServlet  {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
 		
-		System.out.println("Posting to the CREATESERVLET!");
+		
+		String isbn = req.getParameter("isbn");
+		String title = req.getParameter("title");
 		
 		BookService bookService = new BookServiceBean();
 		
-		bookService.create("someIsbn", "someTitle");
+		bookService.create(isbn, title);
 
-		req.getRequestDispatcher("/").forward(req, resp);
+		req.getRequestDispatcher(Action.HOME).forward(req, resp);
 		
 		
 	}

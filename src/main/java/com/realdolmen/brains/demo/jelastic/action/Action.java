@@ -6,6 +6,8 @@ public class Action {
 		
 	}
 	
+	public static final String HOME = "/";
+	
 	public static final String BOOK_CREATE = "/createBook";
 
 }

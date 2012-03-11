@@ -30,12 +30,13 @@
 %>
 
 <h1>Create a book.</h1>
-<form action="<%= Action.BOOK_CREATE %>">
+<form action="<%= Action.BOOK_CREATE %>" method="post">
 	Isbn: <input type="text" name="isbn" /><br />
   	Title: <input type="text" name="title" /><br />
   	<input type="submit" value="Create" />
 </form>
 
+<h4>List of books.</h4>
 <table>
 	<thead>
 		<tr>
